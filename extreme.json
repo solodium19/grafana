@@ -18,7 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 1,
-  "id": 4,
+  "id": 11,
   "links": [],
   "panels": [
     {
@@ -532,13 +532,13 @@
         }
       ],
       "title": "All Interfaces - Current Traffic & Status",
-      "type": "table",
       "transformations": [
         {
           "id": "merge",
           "options": {}
         }
-      ]
+      ],
+      "type": "table"
     },
     {
       "collapsed": false,
@@ -586,6 +586,7 @@
               "type": "linear"
             },
             "showPoints": "never",
+            "showValues": false,
             "spanNulls": false,
             "stacking": {
               "group": "A",
@@ -632,6 +633,7 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "multi",
           "sort": "none"
         }
@@ -683,6 +685,7 @@
               "type": "linear"
             },
             "showPoints": "never",
+            "showValues": false,
             "spanNulls": false,
             "stacking": {
               "group": "A",
@@ -729,6 +732,7 @@
           "showLegend": true
         },
         "tooltip": {
+          "hideZeros": false,
           "mode": "multi",
           "sort": "none"
         }
@@ -764,13 +768,14 @@
           "value": "192.168.2.1"
         },
         "datasource": {
-          "uid": "${DS_PROMETHEUS}"
+          "type": "prometheus",
+          "uid": "PBFA97CFB590B2093"
         },
-        "definition": "label_values(ifHCInOctets, instance)",
+        "definition": "",
         "includeAll": false,
         "name": "Device",
         "options": [],
-        "query": "label_values(ifHCInOctets, instance)",
+        "query": "",
         "refresh": 1,
         "regex": "",
         "type": "query"
